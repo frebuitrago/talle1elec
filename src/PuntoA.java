@@ -1,16 +1,19 @@
 public class A {
 int aField;
-
 @Override
-public boolean equals(Object obj) {
-if (this == obj)
+public boolean equals(Object o) {
+if(this==o) {
 return true;
-if (obj == null)
+}
+if(o==null) {
 return false;
-if (!(obj instanceof A)) //<--
+}
+if(!(o instanceof A)) {
 return false;
-A other = (A) obj;
+}
+A other = (A) o;
 if (aField != other.aField)
 return false;
 return true;
+}
 }
