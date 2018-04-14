@@ -1,0 +1,132 @@
+﻿Patrones Creacionales
+
+Los patrones de creación proporcionan formas de instanciar objetos individuales o grupos de objetos relacionados
+
+
+A.	El patrón abstracto (Abstract Factory.) de fábrica se utiliza para proporcionar a un cliente un conjunto de objetos relacionados o dependientes. La "familia" de objetos creados por la fábrica se determina en tiempo de ejecución.
+
+B.	Constructor. ( Builder.) El patrón del constructor se usa para crear objetos complejos con partes constituyentes que se deben crear en el mismo orden o utilizando un algoritmo específico. Una clase externa controla el algoritmo de construcción.
+C.	Método de fábrica.( Factory Method) El patrón de fábrica se usa para reemplazar los constructores de clase, y resume el proceso de generación de objetos para que el tipo de objeto instanciado pueda determinarse en tiempo de ejecución.
+D.	Prototipo.( Prototype) El patrón de prototipo se utiliza para crear instancias de un nuevo objeto copiando todas las propiedades de un objeto existente, creando un clon independiente. Esta práctica es particularmente útil cuando la construcción de un nuevo objeto es ineficiente.
+E.	Semifallo. (Singleton.) El patrón singleton asegura que solo se crea un objeto de una clase en particular. Todas las demás referencias a objetos de la clase singleton se refieren a la misma instancia subyacente.
+
+
+Patrones estructurales
+
+Los patrones estructurales proporcionan una manera de definir las relaciones entre clases u objetos.
+
+A.	Adaptador. (Adapter.) El patrón de adaptador se utiliza para proporcionar un enlace entre dos tipos incompatibles al envolver al "adaptado" con una clase que admita la interfaz requerida por el cliente.
+B.	Puente. ( Bridge.) El patrón de puente se utiliza para separar los elementos abstractos de una clase de los detalles de implementación, proporcionando los medios para reemplazar los detalles de implementación sin modificar la abstracción.
+C.	Compuesto (Composite.). El patrón compuesto se usa para crear estructuras de árbol jerárquicas y recursivas de objetos relacionados donde se puede acceder y utilizar cualquier elemento de la estructura de manera estándar.
+D.	Decorador (Decorator). El patrón de decorador se usa para extender o alterar la funcionalidad de los objetos en tiempo de ejecución envolviéndolos en un objeto de una clase de decorador. Esto proporciona una alternativa flexible al uso de herencia para modificar el comportamiento.
+E.	Fachada. ( Facade) El patrón de fachada se usa para definir una interfaz simplificada para un subsistema más complejo.
+F.	Flyweight (Flyweight). El patrón flyweight se usa para reducir la memoria y el uso de recursos para modelos complejos que contienen cientos, miles o cientos de miles de objetos similares.
+G.	Apoderado. (Proxy.) El patrón proxy se usa para proporcionar un objeto sustituto o marcador de posición, que hace referencia a un objeto subyacente. El proxy proporciona la misma interfaz pública que la clase de sujeto subyacente, agregando un nivel de direccionamiento indirecto aceptando solicitudes de un objeto cliente y pasándolas al objeto sujeto real según sea necesario.
+
+
+
+
+
+
+
+Patrones de comportamiento
+
+Los patrones de comportamiento definen maneras de comunicación entre clases y objetos.
+
+
+A.	Cadena de responsabilidad. (Chain of Responsibility) El patrón de cadena de responsabilidad se usa para procesar solicitudes variadas, cada una de las cuales puede ser manejada por un manejador diferente.
+B.	Mando. (Command.) El patrón de comando se utiliza para expresar una solicitud, incluida la llamada a realizar y todos sus parámetros necesarios, en un objeto de comando. El comando puede ejecutarse inmediatamente o mantenerse para su uso posterior.
+C.	Interprete. (Interpreter) El patrón de intérprete se utiliza para definir la gramática para las instrucciones que forman parte de un lenguaje o notación, al tiempo que permite que la gramática se extienda fácilmente.
+D.	Iterador. (Iterator.) El patrón de iterador se usa para proporcionar una interfaz estándar para atravesar una colección de elementos en un objeto agregado sin la necesidad de comprender su estructura subyacente.
+E.	Mediador. (Mediator. ) El patrón de mediador se usa para reducir el acoplamiento entre clases que se comunican entre sí. En lugar de que las clases se comuniquen directamente y requieran conocimiento de su implementación, las clases envían mensajes a través de un objeto mediador.
+F.	Recuerdo. (Memento.) El patrón de recuerdo se utiliza para capturar el estado actual de un objeto y almacenarlo de tal manera que se puede restaurar más adelante sin romper las reglas de encapsulación.
+G.	Observador (Observer.). El patrón de observador se usa para permitir que un objeto publique cambios en su estado. Otros objetos se suscriben para recibir notificaciones inmediatas de cualquier cambio.
+H.	Estado. (State.) El patrón de estado se usa para alterar el comportamiento de un objeto a medida que cambia su estado interno. El patrón permite que la clase de un objeto aparentemente cambie en tiempo de ejecución.
+I.	Estrategia. (Strategy ) El patrón de estrategia se usa para crear una familia intercambiable de algoritmos a partir de la cual se elige el proceso requerido en tiempo de ejecución.
+J.	Método de plantilla. (Template Method.) El patrón de método de plantilla se usa para definir los pasos básicos de un algoritmo y permite cambiar la implementación de los pasos individuales.
+K.	Visitante.  (Visitor ) El patrón de visitante se usa para separar un conjunto relativamente complejo de clases de datos estructurados de la funcionalidad que se puede realizar con los datos que contienen.
+
+
+
+
+
+3 PUNTO
+
+Examine la siguiente lista de APIs de Java e identifique el patrón de diseño presente.
+Para cada patrón encontrado describa porque el API lo sigue. Cada grupo de API
+Enumerado corresponde al mismo patrón de diseño.
+a. Creacionales (Abstract Factory, Builder, Singleton, Static Factory Method)
+i. 
+- java.lang.Runtime
+- java.lang.Desktop
+R//: acá se utilizaría el patrón  Builder  da herramienta  para el diseño y programación para construir 
+ii.
+- com.google.common.collect.MapMaker
+R//: aca se utilizaria el patron  Abstract Factory da herramienta  para el diseño y programación 
+
+iii.
+- java.util.Calendar
+- java.text.NumberFormat
+- java.nio.charset.Charset
+R//=Clase abstracta se utiliza el patrón Abstract Factory que proporciona métodos para convertir un instante específico en el tiempo 
+
+iv.
+- javax.xml.parsers.DocumentBuilderFactory
+- javax.xml.transform.TransformerFactory
+- javax.xml.xpath.XPathFactory
+R//= Factory Method  este patro se busca un subclase
+
+b. Structural (Adapter, Decorator, Flyweight)
+i.
+- java.lang.Integer
+- java.lang.Boolean
+
+R/= patrón Adapter ajusta un valor del tipo primitivo int en un objeto
+
+ii.
+- java.io.InputStreamReader
+- java.io.OutputStreamWriter
+- java.util.Arrays
+
+R/=Flyweight su capacidad es muy baja en seguridad
+iii.
+- java.io.BufferedInputStream
+- java.io.DataInputStream
+- java.io.BufferedOutputStream
+- java.util.zip.ZipOutputStream
+- java.util.Collections#checkedList()
+
+R//=patrón Adapter. Una secuencia de entrada subyacente de una manera independiente de la máquina
+c. Behavioural (Chain of responsability, Command, Iterator, Observer, Strategy,
+Template Method)
+i.
+- javax.servlet.FilterChain
+R//=Chain of Responsibility iinvoca filtro en la cadena, o si el filtro que llama es el último filtro en la cadena, para invocar el recurso al final de la cadena.
+
+ii.
+- java.lang.Runnable
+- java.util.concurrent.Callable
+R/= El patrón de iterador cualquier clase cuyas instancias estén destinadas a ser ejecutadas por un hilo
+
+iii.
+- java.util.Iterator
+R/= El patrón de iterador Los iteradores permiten que la persona que llama elimine elementos de la colección subyacente durante la iteración con una semántica bien definida
+
+iv.
+- java.util.Comparator
+- javax.servlet.Filter
+R//=Strategy  Un filtro es un objeto que realiza tareas de filtrado en la solicitud a un recurso (un servlet o contenido estático), o en la respuesta de un recurso, o en ambos.
+v.
+- java.util.AbstractList, java.util.AbstractSet,
+java.util.AbstractMap
+- java.io.InputStream, java.io.OutputStream, java.io.Reader,
+java.io.Writer
+R/=Strategy su clase proporciona una implementación esquemática de la interfaz List para minimizar el esfuerzo requerido para implementar esta interfaz respaldada por un almacén de datos de "acceso aleatorio" (como una matriz).
+
+vi.
+- java.util.EventListener
+- java.util.Observer/java.util.Observable
+
+R/=Observer.). Una interfaz de etiquetado que todas las interfaces de escucha de eventos deben ampliar.
+
+Una introducción a la interfaz Observer y a la clase Observable usando la arquitectura
